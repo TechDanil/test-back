@@ -6,8 +6,13 @@ import userRoutes from './src/routers/user.router';
 const app = express();
 const port = 3000;
 
+
 app.use(bodyParser.json());
 app.use('/api', userRoutes);
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
 
 function start() {
     app.listen(port, async () => {

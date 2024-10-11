@@ -3,6 +3,7 @@ import { createUser, getUsers, updateUser, deleteUser } from '../controllers/use
 
 const router = Router();
 
+
 router.post('/create', createUser);
 router.get('/get/:id?', getUsers);
 router.patch('/update/:id', updateUser);
