@@ -2,15 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**"] }
+      "src": "src/app.ts",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "app.js"
+      "src": "/api/(.*)",
+      "dest": "/src/routers/user.router.ts"
     }
-  ]
+  ],
+  "env": {
+    "DB_HOST": "81.31.247.100",
+    "DB_PORT": "3306",
+    "DB_NAME": "BanGzIsx",
+    "DB_USER": "pMXtsG",
+    "DB_PASS": "efsgHDVxKhlwUZnR"
+  }
 }
