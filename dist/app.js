@@ -20,11 +20,13 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use(body_parser_1.default.json());
 app.use('/api', user_router_1.default);
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
 function start() {
     app.listen(port, () => __awaiter(this, void 0, void 0, function* () {
         try {
             yield db_1.default.sync();
-            console.log('Connection has been established successfully.');
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
