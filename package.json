@@ -1,7 +1,10 @@
 {
   "name": "rulyou-test-task-backend",
   "version": "1.0.0",
-  "main": "dist/app.js",
+  "main": "app.ts",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/app.js",

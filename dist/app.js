@@ -37,5 +37,5 @@ function start() {
     }));
 }
 start();
-exports.default = app;
+module.exports = app;
 //# sourceMappingURL=app.js.map
