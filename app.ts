@@ -1,7 +1,10 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import sequelize from './src/shared/configs/db';
 import userRoutes from './src/routers/user.router';
+
+dotenv.config();
 
 const app = express();
 const port = 3001;
@@ -27,4 +30,4 @@ function start() {
 
 start();
 
-export default app;
+module.exports = app

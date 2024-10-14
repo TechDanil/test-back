@@ -12,11 +12,5 @@
       "dest": "app.ts"
     }
   ],
-  "env": {
-    "DB_HOST": "81.31.247.100",
-    "DB_PORT": "3306",
-    "DB_NAME": "BanGzIsx",
-    "DB_USER": "pMXtsG",
-    "DB_PASS": "efsgHDVxKhlwUZnR"
-  }
+  "outputDirectory": "dist"
 }
