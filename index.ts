@@ -18,10 +18,6 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
-app.all('*', (req: Request, res: Response) => {
-    res.status(404).send('Route not found');
-});
-
 function start() {
     app.listen(port, async () => {
         try {
