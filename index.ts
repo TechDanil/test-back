@@ -14,7 +14,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use('/api', userRoutes);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.send('Hello World')
 })
 
@@ -31,4 +31,4 @@ function start() {
 
 start();
 
-module.exports = app;
+export default app;
