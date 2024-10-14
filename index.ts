@@ -1,4 +1,5 @@
 import express from 'express';
+import { Request, Response } from "express";
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import sequelize from './src/shared/configs/db';
@@ -17,6 +18,10 @@ app.get('/', (req, res) => {
     res.send('Hello World')
 })
 
+app.all('*', (req: Request, res: Response) => {
+    res.status(404).send('Route not found');
+});
+
 function start() {
     app.listen(port, async () => {
         try {
@@ -29,5 +34,3 @@ function start() {
 }
 
 start();
-
-module.exports = app
