@@ -17,7 +17,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const db_1 = __importDefault(require("./src/shared/configs/db"));
 const user_router_1 = __importDefault(require("./src/routers/user.router"));
 const app = (0, express_1.default)();
-const port = 3000;
+const port = 3001;
 app.use(body_parser_1.default.json());
 app.use('/api', user_router_1.default);
 app.get('/', (req, res) => {
@@ -35,4 +35,5 @@ function start() {
     }));
 }
 start();
+exports.default = app;
 //# sourceMappingURL=app.js.map

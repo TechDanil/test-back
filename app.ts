@@ -4,7 +4,7 @@ import sequelize from './src/shared/configs/db';
 import userRoutes from './src/routers/user.router';
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 
 app.use(bodyParser.json());
@@ -26,3 +26,5 @@ function start() {
 }
 
 start();
+
+export default app;
